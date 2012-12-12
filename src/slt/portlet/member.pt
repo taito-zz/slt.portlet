@@ -1,0 +1,16 @@
+<dl
+  class="portlet portletMember"
+  i18n:domain="slt.portlet">
+  <dd class="portletItem">
+    <ul>
+      <li tal:repeat="item view/items">
+        <a
+          tal:attributes="href item/url; title item/title"
+          tal:condition="item/available"
+          tal:content="item/title" />
+      </li>
+    </ul>
+  </dd>
+</dl>
+
+

@@ -1,3 +1,15 @@
 Log in as Manager::
 
     >>> browser.login(TEST_USER_NAME, TEST_USER_PASSWORD)
+
+Add Member Portlet::
+
+    >>> browser.open('/++contextportlets++plone.leftcolumn/+/slt.portlet.MemberPortlet')
+
+Log out and go to portal::
+
+    >>> browser.getLink('Log out').click()
+
+    >>> browser.open('/')
+
+    >>> browser.openBrowser()
