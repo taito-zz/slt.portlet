@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+    interface="slt.portlet.browser.interfaces.ISltPortletLayer"
+    name="slt.portlet"
+    />
+</layers>
