@@ -1,3 +1,4 @@
+from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.portlets.portlets import base
 from plone.portlets.interfaces import IPortletDataProvider
@@ -7,7 +8,7 @@ from zope.interface import implements
 
 
 PloneMessageFactory = MessageFactory("plone")
-
+SLTPolicyMessageFactory = MessageFactory("slt.policy")
 
 
 class IMemberPortlet(IPortletDataProvider):
@@ -35,11 +36,25 @@ class Renderer(base.Renderer):
     def items(self):
         portal_state = self.context.restrictedTraverse('plone_portal_state')
         root_url = portal_state.navigation_root_url()
-        return [{
-            'available': portal_state.anonymous(),
-            'title': PloneMessageFactory(u'Log in'),
-            'url': '{}/login'.format(root_url),
-        }]
+        membership = getToolByName(self.context, 'portal_membership')
+        home_url = membership.getHomeUrl()
+        return [
+            {
+                'available': not home_url,
+                'title': PloneMessageFactory(u'Log in'),
+                'url': '{}/login'.format(root_url),
+            },
+            {
+                'available': home_url,
+                'title': SLTPolicyMessageFactory(u'Addresses'),
+                'url': '{}/@@addresses'.format(home_url),
+            },
+            {
+                'available': home_url,
+                'title': SLTPolicyMessageFactory(u'Orders'),
+                'url': home_url,
+            }
+        ]
 
 
 class AddForm(base.NullAddForm):

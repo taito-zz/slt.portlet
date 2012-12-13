@@ -1,3 +1,4 @@
+from Products.CMFCore.utils import getToolByName
 from hexagonit.testing.browser import Browser
 from plone.app.testing import TEST_USER_ID
 from plone.app.testing import TEST_USER_NAME
@@ -40,6 +41,15 @@ def setUp(self):
     browser.handleErrors = True
     portal.error_log._ignored_exceptions = ()
     setRoles(portal, TEST_USER_ID, ['Manager'])
+
+    membership = getToolByName(portal, 'portal_membership')
+    # membership.setMemberAreaType('Folder')
+    membership.memberareaCreationFlag = True
+
+    regtool = getToolByName(portal, 'portal_registration')
+
+    regtool.addMember('member1', 'member1')
+    setRoles(portal, 'member1', ['Member'])
 
     transaction.commit()
 

@@ -11,5 +11,28 @@ Log out and go to portal::
     >>> browser.getLink('Log out').click()
 
     >>> browser.open('/')
+    >>> print browser.bycss('.portletMember')
+    --- 1 ---
+    <dl class="portlet portletMember"><dd class="portletItem">
+    <ul><li>
+    <a href="http://nohost/plone/login" title="Log in">Log in</a>
+    </li>
+    </ul></dd>
+    </dl>
 
-    >>> browser.openBrowser()
+Log in as member1::
+
+    >>> browser.login('member1', 'member1')
+
+    >>> browser.open('/')
+    >>> print browser.bycss('.portletMember')
+    --- 1 ---
+    <dl class="portlet portletMember"><dd class="portletItem">
+    <ul><li>
+    <a href="http://nohost/plone/Members/member1/@@addresses" title="Addresses">Addresses</a>
+    </li>
+    <li>
+    <a href="http://nohost/plone/Members/member1" title="Orders">Orders</a>
+    </li>
+    </ul></dd>
+    </dl>

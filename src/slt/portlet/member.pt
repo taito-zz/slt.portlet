@@ -3,12 +3,13 @@
   i18n:domain="slt.portlet">
   <dd class="portletItem">
     <ul>
-      <li tal:repeat="item view/items">
-        <a
-          tal:attributes="href item/url; title item/title"
-          tal:condition="item/available"
-          tal:content="item/title" />
-      </li>
+      <tal:block tal:repeat="item view/items">
+        <li tal:condition="item/available">
+          <a
+            tal:attributes="href item/url; title item/title"
+            tal:content="item/title" />
+        </li>
+      </tal:block>
     </ul>
   </dd>
 </dl>
