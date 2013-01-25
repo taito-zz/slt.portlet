@@ -29,9 +29,6 @@ Log in as member1::
     --- 1 ---
     <dl class="portlet portletMember"><dd class="portletItem">
     <ul><li>
-    <a href="http://nohost/plone/Members/member1/@@addresses" title="Addresses">Addresses</a>
-    </li>
-    <li>
     <a href="http://nohost/plone/Members/member1" title="Orders">Orders</a>
     </li>
     </ul></dd>

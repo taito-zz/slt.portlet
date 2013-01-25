@@ -44,11 +44,11 @@ class Renderer(base.Renderer):
                 'title': PloneMessageFactory(u'Log in'),
                 'url': '{}/login'.format(root_url),
             },
-            {
-                'available': home_url,
-                'title': SLTPolicyMessageFactory(u'Addresses'),
-                'url': '{}/@@addresses'.format(home_url),
-            },
+            # {
+            #     'available': home_url,
+            #     'title': SLTPolicyMessageFactory(u'Addresses'),
+            #     'url': '{}/@@addresses'.format(home_url),
+            # },
             {
                 'available': home_url,
                 'title': SLTPolicyMessageFactory(u'Orders'),
