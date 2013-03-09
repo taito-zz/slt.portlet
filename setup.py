@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='slt.portlet',
-    version='0.2',
+    version='0.3',
     description='Portlet for SLT site.',
     long_description=open("README.rst").read(),
     classifiers=[
