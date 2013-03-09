@@ -4,8 +4,19 @@ slt.portlet
 
 Portlets for SLT site.
 
+Currently tested with
+---------------------
+
+- Plone-4.2.5 and Python-2.7.x
+
 Changelog
 ---------
+
+0.3 (2013-03-09)
+================
+
+- Tested with Plone-4.2.5. [taito]
+- Removed unnecessary files. [taito]
 
 0.2 (2013-01-25)
 ================
