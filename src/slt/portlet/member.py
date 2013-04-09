@@ -40,6 +40,11 @@ class Renderer(base.Renderer):
         home_url = membership.getHomeUrl()
         return [
             {
+                'available': True,
+                'title': _(u'The Finnish Association for Nature Conservation'),
+                'url': 'http://www.sll.fi/',
+            },
+            {
                 'available': not home_url,
                 'title': PloneMessageFactory(u'Log in'),
                 'url': '{}/login'.format(root_url),

@@ -12,6 +12,11 @@ Currently tested with
 Changelog
 ---------
 
+0.4 (2013-04-xx)
+================
+
+- Added link to SLL site. [taito]
+
 0.3 (2013-03-09)
 ================
 
