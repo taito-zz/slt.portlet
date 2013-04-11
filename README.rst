@@ -12,10 +12,11 @@ Currently tested with
 Changelog
 ---------
 
-0.4 (2013-04-xx)
+0.4 (2013-04-11)
 ================
 
 - Added link to SLL site. [taito]
+- Moved test package to extras_require. [taito]
 
 0.3 (2013-03-09)
 ================
