@@ -7,7 +7,7 @@ Portlets for SLT site.
 Currently tested with
 ---------------------
 
-- Plone-4.2.5 and Python-2.7.x
+- Plone-4.3 and Python-2.7.x
 
 Changelog
 ---------
