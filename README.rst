@@ -12,6 +12,11 @@ Currently tested with
 Changelog
 ---------
 
+0.5 (2013-04-30)
+================
+
+- Tested with Plone-4.3. [taito]
+
 0.4 (2013-04-11)
 ================
 
